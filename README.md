@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img width="800" height="519" alt="1010-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/0bf0037a-2ff8-411f-829e-f48969e45086" />
+</p>
+
 # 🏊 Swimming Pool Registration Bot
 
 Automatically fills in the **INTI International University Facility Reservation** Google Form to book the 🏊 **Swimming Pool** for today.
