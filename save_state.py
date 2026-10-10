@@ -6,13 +6,13 @@ with sync_playwright() as p:
     ctx = browser.new_context()
     page = ctx.new_page()
 
-    # 1) Логинимся в Google под тем же email, что в .env
+    # 1) Log in to Google with the same email as in .env
     page.goto("https://accounts.google.com/")
-    input("Войди в аккаунт, дождись загрузки аккаунт-страницы и только потом жми Enter в терминале... ")
+    input("Sign in, wait for your account page to load, then press Enter in the terminal... ")
 
-    # 2) Дополнительно заходим на формы, чтобы прогрелись куки домена
+    # 2) Also open Google Forms so its domain cookies get set
     page.goto("https://docs.google.com/forms")
-    input("Когда страница Google Forms откроется — жми Enter для сохранения state.json... ")
+    input("When the Google Forms page opens, press Enter to save state.json... ")
 
     ctx.storage_state(path="state.json")
     browser.close()

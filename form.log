@@ -168,3 +168,73 @@ Traceback (most recent call last):
   File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/site.py", line 522, in venv
     with open(virtual_conf, encoding='utf-8') as f:
 PermissionError: [Errno 1] Operation not permitted: '/Users/isamelsov/Desktop/Swim_pool/form-bot/venv/pyvenv.cfg'
+=== 2026-10-10 21:26:51
+DRY_RUN: form filled, submit skipped (see dry_run.png)
+=== 2026-10-10 21:29:19
+Traceback (most recent call last):
+  File "/Users/isamelsov/Desktop/Swimming-Pool-Registration-Bot/form_book.py", line 84, in <module>
+    human_type(email, EMAIL)
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/isamelsov/Desktop/Swimming-Pool-Registration-Bot/form_book.py", line 23, in human_type
+    locator.type(ch, delay=int(random.uniform(min_d*1000, max_d*1000)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isamelsov/Desktop/Swimming-Pool-Registration-Bot/form-bot/venv/lib/python3.14/site-packages/playwright/sync_api/_generated.py", line 20477, in type
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.type(
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        )
+        ^
+    )
+    ^
+  File "/Users/isamelsov/Desktop/Swimming-Pool-Registration-Bot/form-bot/venv/lib/python3.14/site-packages/playwright/_impl/_sync_base.py", line 113, in _sync
+    self._dispatcher_fiber.switch()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/isamelsov/Desktop/Swimming-Pool-Registration-Bot/form-bot/venv/lib/python3.14/site-packages/playwright/sync_api/_context_manager.py", line 55, in greenlet_main
+    self._loop.run_until_complete(self._connection.run_as_sync())
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.14/asyncio/base_events.py", line 706, in run_until_complete
+    self.run_forever()
+    ~~~~~~~~~~~~~~~~^^
+  File "/opt/anaconda3/lib/python3.14/asyncio/base_events.py", line 677, in run_forever
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "/opt/anaconda3/lib/python3.14/asyncio/base_events.py", line 2018, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/opt/anaconda3/lib/python3.14/selectors.py", line 548, in select
+    kev_list = self._selector.control(None, max_ev, timeout)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/isamelsov/Desktop/Swimming-Pool-Registration-Bot/form_book.py", line 201, in <module>
+    browser.close()
+    ~~~~~~~~~~~~~^^
+  File "/Users/isamelsov/Desktop/Swimming-Pool-Registration-Bot/form-bot/venv/lib/python3.14/site-packages/playwright/sync_api/_generated.py", line 16537, in close
+    return mapping.from_maybe_impl(self._sync(self._impl_obj.close(reason=reason)))
+                                   ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isamelsov/Desktop/Swimming-Pool-Registration-Bot/form-bot/venv/lib/python3.14/site-packages/playwright/_impl/_sync_base.py", line 113, in _sync
+    self._dispatcher_fiber.switch()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+KeyboardInterrupt
+Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+Task was destroyed but it is pending!
+task: <Task cancelling name='Task-33' coro=<Browser.close() done, defined at /Users/isamelsov/Desktop/Swimming-Pool-Registration-Bot/form-bot/venv/lib/python3.14/site-packages/playwright/_impl/_browser.py:236> wait_for=<Future finished result=None> cb=[SyncBase._sync.<locals>.<lambda>() at /Users/isamelsov/Desktop/Swimming-Pool-Registration-Bot/form-bot/venv/lib/python3.14/site-packages/playwright/_impl/_sync_base.py:111]>
+Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+Task was destroyed but it is pending!
+task: <Task cancelling name='Task-32' coro=<Locator.type() done, defined at /Users/isamelsov/Desktop/Swimming-Pool-Registration-Bot/form-bot/venv/lib/python3.14/site-packages/playwright/_impl/_locator.py:694> wait_for=<Future finished result=None> cb=[SyncBase._sync.<locals>.<lambda>() at /Users/isamelsov/Desktop/Swimming-Pool-Registration-Bot/form-bot/venv/lib/python3.14/site-packages/playwright/_impl/_sync_base.py:111]>
+=== 2026-10-10 21:30:09
+✅ Submitted booking for 10.10.2026
+=== 2026-10-10 21:32:44
+DRY_RUN: form filled, submit skipped (see dry_run.png)
+=== 2026-10-10 21:34:55
+✅ Submitted booking for 10.10.2026 (see submitted.png)
+=== 2026-10-10 21:35:51
+✅ Submitted booking for 10.10.2026 (see submitted.png)
+Press Enter to close the browser... 

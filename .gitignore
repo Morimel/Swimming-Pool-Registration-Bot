@@ -1,1 +1,6 @@
 form-bot/venv/
+.env
+state.json
+*.png
+form.log
+.DS_Store
